@@ -1,2 +1,37 @@
-1) Increasing Array
+4) INCREASING ARRAY
+
+#include<bits/stdc++.h>
+#define ll long long
+#define bitc(n) __builtin_popcount(n)
+using namespace std;
+ 
+ 
+int main(){
+  ll n;
+	cin >> n;
+	vector<ll> a(n);
+	for (int i = 0; i < n; i++) {
+		cin >> a[i];
+	}
+ 
+	ll steps = 0;
+	for (int i = 0; i < n - 1; i++) {
+		if (a[i] > a[i + 1]) {
+			steps = steps + a[i] - a[i + 1];
+			a[i+1] += (a[i]-a[i+1]);
+		}
+	}
+ 
+	cout << steps << "\n";
+ 
+	
+	
+	}
+________________________________________________________________________________
+
+ 
+ 
+ 
+ 
+
 
